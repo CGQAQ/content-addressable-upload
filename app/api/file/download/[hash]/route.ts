@@ -5,6 +5,7 @@ import fs from "node:fs/promises";
 import {createReadStream} from "node:fs"
 import {Readable} from "node:stream";
 
+export const dynamic = 'force-dynamic'
 export async function GET(req: NextRequest, {params}: { params: { hash: string } }) {
     const {hash} = params;
     if (typeof hash !== "string") {

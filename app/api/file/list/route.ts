@@ -5,6 +5,7 @@ import { resolve, sep } from "node:path";
 
 import { promises as fs } from "node:fs";
 
+export const dynamic = 'force-dynamic'
 export async function GET() {
     const base = resolve(UPLOAD_BASE);
     const globPattern = (base + sep + "**" + sep + "META.json").replaceAll("\\", "/");
